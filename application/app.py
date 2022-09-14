@@ -6,7 +6,7 @@ import plotly
 import plotly_express as px
 
 #title#
-st.set_page_config(page_title="Easy Analysis APP", 
+st.set_page_config(page_title="Análise de Dados Excel", 
                     page_icon=":bar_chart:", 
                     layout="centered")
         
@@ -37,8 +37,6 @@ try:
 
     colunasSelecionadas = st.sidebar.multiselect("Selecione as colunas:", options=multi, default=multi)
     
-    toDrop = list()
-
     drop_these = list(set(list(multi)) - set(colunasSelecionadas))
 
     df_sel = df.drop(labels=drop_these, axis=1)
