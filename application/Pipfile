@@ -9,6 +9,7 @@ pandas = "==1.4.4"
 plotly = "==5.10.0"
 plotly-express = "==0.4.1"
 streamlit = "==1.12.2"
+typing-extensions = "*"
 
 [dev-packages]
 
