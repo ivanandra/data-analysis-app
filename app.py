@@ -9,7 +9,7 @@ st.set_page_config(page_title="Análise de Dados Excel",
                     page_icon=":bar_chart:", 
                     layout="centered")
         
-st.title("APP de Análise de Dados")
+st.title("APP de Análise de Dados Excel")
 
 #sidebar#
 st.sidebar.subheader("Configurações e Gráficos")
