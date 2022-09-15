@@ -56,8 +56,8 @@ chart_select = st.sidebar.selectbox(
 if chart_select == "Scatterplots":
     st.sidebar.subheader("Configurações de gráficos Scatterplot")
     try:
-        x_values = st.sidebar.selectbox("X axis", options=colunasSelecionadas)
-        y_values = st.sidebar.selectbox("Y axis", options=colunasSelecionadas)
+        x_values = st.sidebar.selectbox("Eixo X", options=colunasSelecionadas)
+        y_values = st.sidebar.selectbox("Eixo Y", options=colunasSelecionadas)
         plot = px.scatter(data_frame=df, x=x_values, y=y_values, title=uploaded_file.name, width=900, height=600)
 
         st.plotly_chart(plot)
