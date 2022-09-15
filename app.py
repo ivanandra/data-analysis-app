@@ -9,7 +9,7 @@ st.set_page_config(page_title="Análise de Dados Excel",
                     page_icon=":bar_chart:", 
                     layout="centered")
         
-st.title("APP de Análise de Dados Excel")
+st.subheader("APP de Análise de Dados Excel")
 
 #sidebar#
 st.sidebar.subheader("Configurações e Gráficos")
@@ -41,11 +41,12 @@ try:
     df_sel = df.drop(labels=drop_these, axis=1)
     df_sel.head()
 
+    st.write("Dados da planilha:")
     st.dataframe(df_sel)
 
 except Exception as e:
     print(e)
-    st.write("Por favor, faça o Upload de um arquivo para visualizar seus dados")
+    st.write("Por favor, faça o Upload de um arquivo para visualizar seus dados.")
 
 #select box to configure the chart type#
 chart_select = st.sidebar.selectbox(
@@ -60,6 +61,7 @@ if chart_select == "Scatterplots":
         y_values = st.sidebar.selectbox("Eixo Y", options=colunasSelecionadas)
         plot = px.scatter(data_frame=df, x=x_values, y=y_values, title=uploaded_file.name, width=900, height=600)
 
+        st.subheader("Gráficos")
         st.plotly_chart(plot)
     except Exception as e:
         print(e)
@@ -72,6 +74,7 @@ if chart_select == "Boxplot":
 
         plot = px.bar(df, x = x_values, y = y_values, title=uploaded_file.name, width=900, height=600)
 
+        st.subheader("Gráficos")
         st.plotly_chart(plot)
     except Exception as e:
         print(e)
@@ -84,6 +87,7 @@ if chart_select == "Lineplots":
 
         plot = px.line(df, x = x_values, y = y_values, title=uploaded_file.name, width=900, height=600)
 
+        st.subheader("Gráficos")
         st.plotly_chart(plot)
     except Exception as e:
         print(e)
@@ -97,6 +101,7 @@ if chart_select == "Histogram":
 
         plot = px.histogram(df, x = x_values, y = y_values, title=uploaded_file.name, width=900, height=600)
 
+        st.subheader("Gráficos")
         st.plotly_chart(plot)
     except Exception as e:
         print(e)
