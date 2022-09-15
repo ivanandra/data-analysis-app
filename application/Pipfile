@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
-pandas = "*"
-plotly = "*"
-plotly-express = "*"
-streamlit = "*"
+numpy = "==1.23.2"
+pandas = "==1.4.4"
+plotly = "==5.10.0"
+plotly-express = "==0.4.1"
+streamlit = "==1.12.2"
 
 [dev-packages]
 
